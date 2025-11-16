@@ -1,0 +1,21 @@
+FROM tensorflow/tensorflow:latest-gpu
+
+WORKDIR /app
+
+RUN apt-get -y update && apt-get upgrade -y && apt-get install -y \
+    libopencv-core-dev \
+    ffmpeg \
+    nano \
+    curl \
+    jq \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install \
+    opencv-python \
+    tensorflow \
+    scikit-learn \
+    numba
+
+EXPOSE 8000
+
+CMD ["/bin/bash"]
