@@ -89,6 +89,7 @@
     <h2></h2>
     
     <form action="liv" method="post" onSubmit={handleSubmit}>
+      {%csrf_token%}
       <label for="name">Name:</label>
       <input type="text"  id="name" name="name" placeholder="Name" required/><br/>
 

@@ -83,6 +83,8 @@ def liv(request):
     Sgpt_Alamine_Aminotransferase=float(request.POST.get('Sgpt_Alamine_Aminotransferase','default'))
     Total_Protiens=float(request.POST.get('Total_Protiens','default'))
     A_G_Ratio_Albumin_and_Globulin_Ratio=float(request.POST.get('A_G_Ratio_Albumin_and_Globulin_Ratio','default'))
+    
+    print(type(Direct_Bilirubin),type(Alkphos_Alkaline_Phosphotase),type(Sgpt_Alamine_Aminotransferase),type(Total_Protiens),type(A_G_Ratio_Albumin_and_Globulin_Ratio))
 
     if Gender_of_the_patient==1.0:
         prediction_array=[[1.0,0.0,0.0,Age_of_the_patient,Direct_Bilirubin,Alkphos_Alkaline_Phosphotase,
@@ -154,7 +156,7 @@ def cancer_pred(request):
 def brain_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\brain', img_file.name)
+        img_path = os.path.join('static/temp/brain', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -180,7 +182,7 @@ def brain_pred(request):
 def breast_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\breast', img_file.name)
+        img_path = os.path.join('static/temp/breast', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -203,7 +205,7 @@ def breast_pred(request):
 def all_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\all', img_file.name)
+        img_path = os.path.join('static/temp/all', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -230,7 +232,7 @@ def all_pred(request):
 def lymph_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\lymph', img_file.name)
+        img_path = os.path.join('static/temp/lymph', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -255,7 +257,7 @@ def lymph_pred(request):
 def kidney_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\kidney', img_file.name)
+        img_path = os.path.join('static/temp/kidney', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -278,7 +280,7 @@ def kidney_pred(request):
 def cervical_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\cervical', img_file.name)
+        img_path = os.path.join('static/temp/cervical', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -307,7 +309,7 @@ def cervical_pred(request):
 def lung_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\lung', img_file.name)
+        img_path = os.path.join('static/temp/lung', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -335,7 +337,7 @@ def lung_pred(request):
 def oral_pred(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\oral', img_file.name)
+        img_path = os.path.join('static/temp/oral', img_file.name)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -365,7 +367,8 @@ def segment(request):
 def segmentation(request):
     if request.method == 'POST' and request.FILES['img_file']:
         img_file = request.FILES['img_file']
-        img_path = os.path.join('static\\temp\\brain', img_file.name)
+        img_path = os.path.join('static/temp/brain', img_file.name)
+        print(img_path)
         with open(img_path, 'wb+') as destination:
             for chunk in img_file.chunks():
                 destination.write(chunk)
@@ -422,9 +425,12 @@ def segmentation(request):
         image = tf.keras.preprocessing.image.array_to_img(image_array)
 
         # Save the image in a certain location
-        pred_img_path = os.path.join('static\\pred', name)
+        #img_path = os.path.join('static/temp/oral', img_file.name)
+        pred_img_path = os.path.join('static/pred', img_file.name) 
+        print(pred_img_path)
         image.save(pred_img_path)
         n=os.path.join("static/pred",name)
+        print(n)
         device = cuda.get_current_device()
         device.reset()
     return render(request,"segimg.html",{"raw":n})
