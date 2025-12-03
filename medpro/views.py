@@ -105,12 +105,7 @@ def liv(request):
     else:
         return render (request, 'output_.html', {'raw':rawdata})
 
-
-    
-# def contact(request):
-#     if(request.method=="POST"):
-#         name=request.POST.get("name")
-#         email=request.POST.get("email")
+ 
 
 def OCRsubmit(request):
     if request.method=="POST":
@@ -125,7 +120,7 @@ def heart(request):
     return render(request,"heart.html")
 
 def cancer(request):
-    return render(request,"menu.html")
+    return render(request,"cancer_home.html")
 def brain(request):
     return render(request,"form_brain.html")
 def breast(request):

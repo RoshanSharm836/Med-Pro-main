@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancer Prediction Menu</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gradient-to-br from-[#f0f4ff] to-[#dff0ff] min-h-screen flex flex-col"
+  >
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-[#0C0024]/95 shadow-2xl backdrop-blur-lg z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="{% static 'menu/logo.jpg' %}"
+            class="w-12 h-12 rounded-full shadow-lg"
+          />
+          <span class="text-white text-xl font-semibold tracking-wide"
+            >MedPro</span
+          >
+        </div>
+
+        <ul class="hidden md:flex gap-8 text-white text-lg font-medium">
+          <li><a href="/" class="hover:text-yellow-400 transition">Home</a></li>
+          <li>
+            <a href="/#services" class="hover:text-yellow-400 transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="/#contact" class="hover:text-yellow-400 transition"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="/#about" class="hover:text-yellow-400 transition">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- TITLE -->
+    <header class="pt-32 text-center">
+      <h1 class="text-5xl font-bold text-gray-900">Cancer Prediction Models</h1>
+      <p class="text-gray-700 mt-3 text-lg">
+        Choose any model to begin diagnosis
+      </p>
+    </header>
+
+    <!-- CARD GRID -->
+    <main class="max-w-7xl mx-auto px-6 py-16 flex-grow">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+        {% comment %} BRAIN {% endcomment %}
+        <a href="brain" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/brain.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              Brain Cancer
+            </h2>
+          </div>
+        </a>
+
+        {% comment %} BREAST {% endcomment %}
+        <a href="breast" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/breast.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              Breast Cancer
+            </h2>
+          </div>
+        </a>
+
+        {% comment %} KIDNEY {% endcomment %}
+        <a href="kidney" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/kidney.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              Kidney Cancer
+            </h2>
+          </div>
+        </a>
+
+        {% comment %} LUNG & COLON {% endcomment %}
+        <a href="lung" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/lung.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              Lung & Colon Cancer
+            </h2>
+          </div>
+        </a>
+
+        {% comment %} LYMPHOMA {% endcomment %}
+        <a href="lym" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/lym.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              Lymphoma
+            </h2>
+          </div>
+        </a>
+
+        {% comment %} ORAL {% endcomment %}
+        <a href="oral" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/oral.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              Oral Cancer
+            </h2>
+          </div>
+        </a>
+
+        {% comment %} CERVICAL {% endcomment %}
+        <a href="cervical" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/cervical.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              Cervical Cancer
+            </h2>
+          </div>
+        </a>
+
+        {% comment %} ALL {% endcomment %}
+        <a href="all" class="block group">
+          <div
+            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+          >
+            <img
+              src="{% static 'menu/all.jpg' %}"
+              class="w-full h-48 object-cover"
+            />
+            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+              All (Combined)
+            </h2>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#0C0024] text-white text-center py-5 mt-auto">
+      <p>&copy; 2025-26 MedPro | Designed & Developed by Roshan</p>
+    </footer>
+  </body>
+</html>

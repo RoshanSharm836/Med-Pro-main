@@ -1,199 +1,243 @@
-{%load static%}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedPro - AI Health Diagnostics</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MedPro - Home</title>
-  <link rel="stylesheet" href="{% static 'home.css'%}" />
-  <link rel="shortcut icon" href="{% static 'hero.png'%}" type="image/x-icon">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Custom Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .hero-bg {
+        background: linear-gradient(135deg, #0c0024 0%, #3a0ca3 100%);
+      }
+    </style>
+  </head>
 
+  <body class="bg-gray-50">
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-[#0C0024]/95 shadow-2xl backdrop-blur-lg z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16"
+      >
+        <div class="flex items-center gap-3">
+          <img
+            src="{% static 'menu/logo.jpg' %}"
+            class="w-12 h-12 rounded-full shadow-lg"
+          />
+          <span class="text-white text-xl font-semibold tracking-wide"
+            >MedPro</span
+          >
+        </div>
 
-<body>
-  <div class="center" id="center">
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-    <div class="wave"></div>
-</div>
-
-
-<div id="bd">  
-  <section>
-    <nav>
-      <div>
-        <img src="{% static 'logo.jpg'%}" alt="logo" />
-      </div>
-      <div>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#Services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="hidden md:flex gap-8 text-white text-lg font-medium">
+          <li><a href="/" class="hover:text-yellow-400 transition">Home</a></li>
+          <li>
+            <a href="/#services" class="hover:text-yellow-400 transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="/#contact" class="hover:text-yellow-400 transition"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="/#about" class="hover:text-yellow-400 transition">About</a>
+          </li>
         </ul>
       </div>
     </nav>
-  </section>
-  <br><br><br><br><br>
-  <section id="home">
-    <main>
-      <section class="hero">
-        <div class="hero-text">
-          <h1 class="hero-t">Welcome to Website of future</h1>
-          <h3 id="typing-effect"> </h3>
-          
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg text-white pt-32 pb-20">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h1 class="text-5xl font-bold leading-tight">
+            AI Powered<br />Medical Diagnostics
+          </h1>
+
+          <p class="mt-5 text-lg text-gray-200">
+            Leverage cutting-edge machine learning models to detect diseases
+            with accuracy and confidence.
+          </p>
+
+          <div class="mt-8 flex gap-4">
+            <a
+              href="#services"
+              class="px-6 py-3 bg-white text-indigo-700 rounded-lg font-semibold shadow hover:bg-gray-100"
+            >
+              Explore Services
+            </a>
+
+            <a
+              href="#contact"
+              class="px-6 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white/20"
+            >
+              Contact Us
+            </a>
+          </div>
         </div>
-        <img src="{% static 'hero.png'%}" width="400" height="500" alt="Hero Image" />
-      </section>
 
-
-      <br>
-      <br><br><br><br>
-      <section class="features" id="Services">
-        
-      <a href="threeopt" style="text-decoration: none; color:#0C0024 ">
-        <div class="feature">
-          <img src="{% static 'home/DD_logo.png'%}" style="width:155px; height:155px" alt="Feature 2" />
-          <h2><Disease href="">Disease Detection</h2>
-          <p>Detect various kind of diseases from daily life</p>
-        </div>
-      </a>
-       
-        <a href="cancer" style="text-decoration: none; color:#0C0024">
-        <div class="feature">
-          <img src="{% static 'home/Cancer_logo.png'%}" style="width:155px; height:155px" alt="Feature 2" />
-          <h2>Cancer Prediction</h2>
-          <p>Help us to predict your have cancer or not</p>
-        </div>
-      </a>
-      </section>
-
-      {% comment %} <section class="action">
-        <h2>Steps to take forward</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#" class="btn">Get Started</a>
-      </section> {% endcomment %}
-    </main>
-  </section>
-
-
-
-
-  <section>
-    <div class="carousel-container">
-      <div class="carousel-slide">
-        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" width="150%" alt="image1">
-        <div class="carousel-caption">
-          <h2>OCR Detection</h2>
-          <p>Health is not just the absence of disease, it's the state of complete physical, mental and social well-being.</p>
+        <div class="text-center">
+          <img
+            src="{% static 'hero.png' %}"
+            class="w-80 mx-auto drop-shadow-lg"
+          />
         </div>
       </div>
-      <div class="carousel-slide">
-        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" width="150%" alt="image2">
-        <div class="carousel-caption">
-          <h2>Disease Detection</h2>
-          <p>The only way to keep your health is to eat what you don't want, drink what you don't like, and do what you'd rather not</p>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900">Our AI Models</h2>
+        <p class="text-gray-600 mt-3">Choose a model to begin the diagnosis</p>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+        <!-- Disease Detection -->
+        <a href="/threeopt" class="block">
+          <div
+            class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition"
+          >
+            <img
+              src="{% static 'home/DD_logo.png' %}"
+              class="w-28 h-28 mx-auto"
+            />
+            <h3 class="mt-6 text-2xl font-semibold text-gray-800 text-center">
+              Liver Disease Detection
+            </h3>
+            <p class="mt-3 text-gray-600 text-center">
+              Upload medical parameters to detect liver diseases.
+            </p>
+          </div>
+        </a>
+
+        <!-- Cancer Prediction -->
+        <a href="/cancer" class="block">
+          <div
+            class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition"
+          >
+            <img
+              src="{% static 'home/Cancer_logo.png' %}"
+              class="w-28 h-28 mx-auto"
+            />
+            <h3 class="mt-6 text-2xl font-semibold text-gray-800 text-center">
+              Cancer Prediction
+            </h3>
+            <p class="mt-3 text-gray-600 text-center">
+              Predict cancer probability using advanced ML models.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-20 bg-gray-100">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900">About Us</h2>
+      </div>
+
+      <div
+        class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
+          <p class="text-gray-600">
+            MedPro is an AI-powered healthcare platform created to assist both
+            patients and doctors by providing fast, accurate, and accessible
+            disease diagnosis using machine learning.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow">
+          <div class="flex gap-4 items-center">
+            <img
+              src="{% static 'roshan.jpg' %}"
+              class="w-20 h-20 rounded-full shadow"
+            />
+            <div>
+              <h4 class="text-xl font-semibold text-gray-800">Roshan Kumar</h4>
+              <p class="text-gray-600">1st Semester | IIT Patna</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="carousel-slide">
-        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" width="150%" alt="image3">
-        <div class="carousel-caption">
-          <h2>Tumor Segmentation</h2>
-          <p>Good health is not something we can buy. However, it can be an extremely valuable savings account</p>
-        </div>
-      </div>
-      <div class="carousel-slide">
-        <img src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg" width="150%" alt="image4">
-        <div class="carousel-caption">
-          <h2>Cancer Prediction</h2>
-          <p>The art of medicine consists in amusing the patient while nature cures the disease</p>
-        </div>
-      </div>
-      <!-- <a class="prev" onclick="prevSlide()">&#10094;</a>
-      <a class="next" onclick="nextSlide()">&#10095;</a> -->
-    </div>
-    
-  </section>
+    </section>
 
-  <br><br><br>
-
-
-  <section id="about">
-    <div class="head" style="text-align: center; font-size:4rem ;color: rgb(12, 0, 36);"><h2>About Us</h2></div>
-    <div class="container">
-      
-      <div class="box">
-        <img src="{% static 'raj.jpeg'%}" alt="Image 1">
-        <div class="info">
-          <h2>Raj Krishna</h2>
-          <p>1st Semester | IIT Patna</p>
-        </div>
-      </div>
-      
-  </section>
-
-
-  <br><br><br>
-
-  <section id="contact">
-    <div class="conta">
-      <div class="heading">
-          <br><br><br><br><br><br>
-        <h4>Contact Me</h4>
-        <div class="subheading">DEV-TAS | Dit University</div>
+    <!-- CONTACT -->
+    <section id="contact" class="py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900">Contact Us</h2>
+        <p class="text-gray-600">We’ll get back to you shortly.</p>
       </div>
 
-      <div class="form-conta">
-        <form autocomplete="off">
+      <div class="max-w-3xl mx-auto px-6">
+        <form method="POST" class="bg-white p-8 rounded-2xl shadow">
           {% csrf_token %}
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+
+          <div class="mb-5">
+            <label class="text-gray-700 font-medium">Name</label>
+            <input
+              type="text"
+              name="name"
+              class="w-full mt-2 p-3 border rounded-lg"
+              required
+            />
           </div>
 
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+          <div class="mb-5">
+            <label class="text-gray-700 font-medium">Email</label>
+            <input
+              type="email"
+              name="email"
+              class="w-full mt-2 p-3 border rounded-lg"
+              required
+            />
           </div>
 
-          <div class="mb-4">
-            <label>
-              Message
-            </label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+          <div class="mb-5">
+            <label class="text-gray-700 font-medium">Message</label>
+            <textarea
+              name="message"
+              rows="5"
+              class="w-full mt-2 p-3 border rounded-lg"
+              required
+            ></textarea>
           </div>
-          <button class="butt">
+
+          <button
+            class="w-full py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700"
+          >
             Submit
           </button>
         </form>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-
-  <br><br>
-
-  <section id="footer">
-    <footer>
-      <p>&copy; 2025&26 Designed & Developed by Roshan </p>
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-6 mt-10">
+      <p class="text-center">
+        &copy; 2025-26 MedPro | Designed & Developed by Roshan
+      </p>
     </footer>
-  </section></div>
-
-  <script src={% static "home.js" %}></script>
-</body>
-
+  </body>
 </html>
