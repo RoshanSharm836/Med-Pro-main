@@ -64,125 +64,138 @@
     </header>
 
     <!-- CARD GRID -->
-    <main class="max-w-7xl mx-auto px-6 py-16 flex-grow">
+    <!-- CARD GRID -->
+    <main class="container mx-auto px-6 py-16 flex-grow">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {% comment %} BRAIN {% endcomment %}
-        <a href="brain" class="block group">
+        <!-- BRAIN -->
+        <a href="brain" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/brain.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
-              Brain Cancer
-            </h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Brain Cancer</h2>
+            <p class="text-gray-600 text-sm">
+              Upload MRI images to detect brain tumors using AI.
+            </p>
           </div>
         </a>
 
-        {% comment %} BREAST {% endcomment %}
-        <a href="breast" class="block group">
+        <!-- BREAST -->
+        <a href="breast" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/breast.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
-              Breast Cancer
-            </h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Breast Cancer</h2>
+            <p class="text-gray-600 text-sm">
+              Upload mammogram data for early-stage breast cancer detection.
+            </p>
           </div>
         </a>
 
-        {% comment %} KIDNEY {% endcomment %}
-        <a href="kidney" class="block group">
+        <!-- KIDNEY -->
+        <a href="kidney" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/kidney.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
-              Kidney Cancer
-            </h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Kidney Cancer</h2>
+            <p class="text-gray-600 text-sm">
+              Upload scan details for AI-based kidney cancer evaluation.
+            </p>
           </div>
         </a>
 
-        {% comment %} LUNG & COLON {% endcomment %}
-        <a href="lung" class="block group">
+        <!-- LUNG & COLON -->
+        <a href="lung" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/lung.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">
               Lung & Colon Cancer
             </h2>
+            <p class="text-gray-600 text-sm">
+              AI model developed to detect lung & colon abnormalities.
+            </p>
           </div>
         </a>
 
-        {% comment %} LYMPHOMA {% endcomment %}
-        <a href="lym" class="block group">
+        <!-- LYMPHOMA -->
+        <a href="lym" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/lym.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
-              Lymphoma
-            </h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Lymphoma</h2>
+            <p class="text-gray-600 text-sm">
+              Detect lymphoma by uploading microscopic cell images.
+            </p>
           </div>
         </a>
 
-        {% comment %} ORAL {% endcomment %}
-        <a href="oral" class="block group">
+        <!-- ORAL -->
+        <a href="oral" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/oral.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
-              Oral Cancer
-            </h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Oral Cancer</h2>
+            <p class="text-gray-600 text-sm">
+              Upload oral lesion images for AI-powered cancer screening.
+            </p>
           </div>
         </a>
 
-        {% comment %} CERVICAL {% endcomment %}
-        <a href="cervical" class="block group">
+        <!-- CERVICAL -->
+        <a href="cervical" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/cervical.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">
               Cervical Cancer
             </h2>
+            <p class="text-gray-600 text-sm">
+              Upload test results to predict cervical cancer risk.
+            </p>
           </div>
         </a>
 
-        {% comment %} ALL {% endcomment %}
-        <a href="all" class="block group">
+        <!-- ALL -->
+        <a href="all" class="w-full">
           <div
-            class="bg-white/60 shadow-xl backdrop-blur-lg rounded-2xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300"
+            class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-1 transition text-center"
           >
             <img
               src="{% static 'menu/all.jpg' %}"
-              class="w-full h-48 object-cover"
+              class="w-full h-48 object-contain mx-auto mb-6"
             />
-            <h2 class="text-center text-xl font-semibold py-4 text-gray-900">
-              All (Combined)
-            </h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">All Combined</h2>
+            <p class="text-gray-600 text-sm">
+              Run all models together for multi-disease prediction.
+            </p>
           </div>
         </a>
       </div>
